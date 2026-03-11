@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --accent: #00ff88;
+  --accent-cyan: #4ecdc4;
+  --accent-pink: #ff6b6b;
+  --accent-yellow: #ffe66d;
+  --accent-purple: #a855f7;
+  --accent-blue: #3b82f6;
+  
+  --bg-dark: #0a0a0f;
+  --bg-card: #12121a;
+  --bg-border: #1e1e2e;
+  --bg-hover: #1a1a2e;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg-dark);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2e2e4e;
+}
+
+/* Monaco Editor Custom Styles */
+.monaco-editor {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Glow Effects */
+.glow-primary {
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+.glow-primary-strong {
+  box-shadow: 0 0 40px rgba(0, 255, 136, 0.5);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(78, 205, 196, 0.3);
+}
+
+.glow-pink {
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+}
+
+/* Neon Text */
+.neon-text {
+  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+}
+
+/* Card Styles */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-border);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 255, 136, 0.1);
+}
+
+/* Button Styles */
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-300;
+  @apply flex items-center justify-center gap-2;
+}
+
+.btn-primary {
+  @apply bg-primary text-dark-bg hover:bg-primary-dark;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+}
+
+.btn-secondary {
+  @apply bg-dark-card border border-dark-border text-white;
+  @apply hover:border-primary hover:text-primary;
+}
+
+/* Input Styles */
+.input {
+  @apply w-full px-4 py-3 rounded-lg bg-dark-card border border-dark-border;
+  @apply text-white placeholder-gray-500;
+  @apply focus:outline-none focus:border-primary transition-colors;
+}
+
+/* Badge Styles */
+.badge {
+  @apply px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.badge-easy {
+  @apply bg-green-500/20 text-green-400;
+}
+
+.badge-medium {
+  @apply bg-yellow-500/20 text-yellow-400;
+}
+
+.badge-hard {
+  @apply bg-red-500/20 text-red-400;
+}
+
+/* Animation Classes */
+.animate-in {
+  animation: slide-up 0.3s ease-out;
+}
+
+/* Theme Classes */
+.theme-neon {
+  --accent: #00ff88;
+}
+
+.theme-cyber {
+  --accent: #00ffff;
+}
+
+.theme-pink {
+  --accent: #ff6b6b;
+}
+
+.theme-purple {
+  --accent: #a855f7;
+}
